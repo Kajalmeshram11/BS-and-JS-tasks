@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Builderz</title>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: black;
+                color: rgb(0, 0, 0);
+                font-family: Arial, sans-serif;
+            }
+
+            .header {
+                background-color: #ffc400;
+                padding: 10px;
+            }
+
+            .head1,
+            .head2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .head1 {
+                padding: 10px 0;
+            }
+
+            .head2 {
+                background-color: rgba(51, 41, 9, 0.967);
+                padding: 10px;
+                width: 100%;
+            }
+
+            .logo h1 {
+                font-size: 2rem;
+            }
+
+            .menu {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .menu p {
+                margin: 0 10px;
+                font-size: 1rem;
+            }
+
+            .menu i {
+                font-size: 1.5rem;
+                margin-right: 5px;
+            }
+
+            .navitems ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+            }
+
+            .navitems ul li {
+                margin: 0 10px;
+            }
+
+            .navitems ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+
+            button {
+                background-color: rgba(58, 56, 50, 0.967);
+                color: white;
+                font-size: 1rem;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 20px;
+                cursor: pointer;
+                margin: 10px 0;
+            }
+
+            @media (max-width: 768px) {
+                .head1,
+                .head2 {
+                    flex-direction: column;
+                }
+
+                .menu {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .menu p {
+                    margin: 5px 0;
+                }
+
+                .navitems ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .navitems ul li {
+                    margin: 5px 0;
+                }
+            }
+
+            .content {
+                background-image: url('construction.jpg');
+                background-size: cover;
+                color: white;
+                text-align: center;
+                padding: 150px 0;
+            }
+            .feature {
+                padding: 0;
+            }
+            .feature .card {
+                border: none;
+                margin: 0;
+                border-radius: 0;
+            }
+            .feature .card-body {
+                padding: 30px;
+            }
+            .feature .icon {
+                color: #f7b500;
+                margin-bottom: 15px;
+            }
+            .feature-expert {
+                background-color: #06092f;
+                color: #f7b500c8;
+            }
+            .feature-quality {
+                background-color: #ffc400;
+                color: #06092f;
+            }
+            .feature-support {
+                background-color: #06092f;
+                color: #f7b500c8;
+            }
+            .footer {
+                background-color: #f7b500;
+                color: white;
+                padding: 20px 0;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="head1">
+                <div class="logo">
+                    <h1 class="font-weight-bolder">Builderz</h1>
+                </div>
+                <div class="menu">
+                    <i class="fa fa-business-time"></i>
+                    <p>Operating time</p>
+                    <i class="fa fa-user-nurse"></i>
+                    <p>Workers help</p>
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>Shop now</p>
+                </div>
+            </div>
+            <div class="head2">
+                <div class="navitems">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="getquote">Get Quote</button>
+            </div>
+        </div>
+
+        <header class="content">
+            <div class="container">
+                <h4>We Are Professional</h4>
+                <h1 class="font-weight-bolder">For Your Dream Project</h1>
+                <a
+                    href="#"
+                    class="btn btn-outline-light border-radius-0 mt-3 py-3 font-weight-bold"
+                    >GET A QUOTE</a
+                >
+            </div>
+        </header>
+
+        <section class="feature text-center">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <div class="card feature-expert">
+                            <div class="card-body">
+                                <div class="icon">
+                                    <img src="worker.png" alt="Expert Worker" />
+                                </div>
+                                <h3 class="card-title">Expert Worker</h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet elit. Phasellus
+                                    nec pretium mi. Curabitur facilisis ornare
+                                    velit non vulputate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card feature-quality">
+                            <div class="card-body">
+                                <div class="icon">
+                                    <img src="quality.png" alt="Quality Work" />
+                                </div>
+                                <h3 class="card-title">Quality Work</h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet elit. Phasellus
+                                    nec pretium mi. Curabitur facilisis ornare
+                                    velit non vulputate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card feature-support">
+                            <div class="card-body">
+                                <div class="icon">
+                                    <img src="support.png" alt="24/7 Support" />
+                                </div>
+                                <h3 class="card-title">24/7 Support</h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet elit. Phasellus
+                                    nec pretium mi. Curabitur facilisis ornare
+                                    velit non vulputate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Builderz. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

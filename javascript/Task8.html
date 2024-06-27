@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(to bottom, #e9dc77, #ea7ea9);
+        }
+        .form-container {
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+        .form-header {
+            text-align: center;
+            color: #0000ff;
+            margin-bottom: 20px;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .checkbox-label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        .form-inner {
+            font-weight: normal;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="form-container">
+            <h2 class="form-header">Registration Form</h2>
+            <form id="registrationForm">
+                <div class="form-group row">
+                    <label for="firstName" class="col-sm-3 col-form-label">First Name:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="firstName" required />
+                        <div id="firstNameError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="lastName" class="col-sm-3 col-form-label">Last Name:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="lastName" required />
+                        <div id="lastNameError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-3 col-form-label">Email:</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" required />
+                        <div id="emailError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-3 col-form-label">Password:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="password" required />
+                        <small id="passwordHelp" class="form-text text-muted strength"></small>
+                        <div id="passwordError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="rePassword" class="col-sm-3 col-form-label">Re-enter Password:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="rePassword" required />
+                        <div id="rePasswordError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Gender:</label>
+                    <div class="col-sm-9">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male" required />
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female" required />
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div id="genderError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="age" class="col-sm-3 col-form-label">Age:</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="age" required />
+                        <div id="ageError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="phone" class="col-sm-3 col-form-label">Phone Number:</label>
+                    <div class="col-sm-9">
+                        <input type="tel" class="form-control" id="phone" required />
+                        <div id="phoneError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="address" class="col-sm-3 col-form-label">Address:</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="address" rows="3" required></textarea>
+                        <div id="addressError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="state" class="col-sm-3 col-form-label">State:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="state" required />
+                        <div id="stateError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="country" class="col-sm-3 col-form-label">Country:</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="country" required>
+                            <option value="">Choose your country</option>
+                            <option>India</option>
+                            <!-- Add more country options as needed -->
+                        </select>
+                        <div id="countryError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Languages known:</label>
+                    <div class="col-sm-9">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="english" value="english" />
+                            <label class="form-check-label" for="english">English</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="kannada" value="kannada" />
+                            <label class="form-check-label" for="kannada">Kannada</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hindi" value="hindi" />
+                            <label class="form-check-label" for="hindi">Hindi</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="telugu" value="telugu" />
+                            <label class="form-check-label" for="telugu">Telugu</label>
+                        </div>
+                        <div id="languagesError" class="error-message"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-9 offset-sm-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="declarationCheckbox" required />
+                            <label class="form-check-label" for="declarationCheckbox">Hereby, I declare all the given details are true</label>
+                            <div id="declarationError" class="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-9 offset-sm-3">
+                        <label class="form-inner">Log in to <a href="https://ethnus.com/">Ethnus</a> website</label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" id="saveButton" class="btn btn-danger rounded-pill">REGISTER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('saveButton').addEventListener('click', function () {
+            var formIsValid = true;
+
+            var fields = [
+                'firstName', 'lastName', 'email', 'password', 'rePassword', 
+                'age', 'phone', 'address', 'state', 'country'
+            ];
+
+            fields.forEach(function (field) {
+                var input = document.getElementById(field);
+                var errorDiv = document.getElementById(field + 'Error');
+
+                if (!input.value) {
+                    errorDiv.textContent = 'POOR';
+                    errorDiv.style.color = 'red';
+                    formIsValid = false;
+                } else {
+                    errorDiv.textContent = '';
+                }
+            });
+
+            var password = document.getElementById('password').value;
+            var rePassword = document.getElementById('rePassword').value;
+            var passwordHelp = document.getElementById('passwordHelp');
+            var strength = getPasswordStrength(password);
+            passwordHelp.textContent = 'Strength: ' + strength;
+
+            if (password !== rePassword) {
+                document.getElementById('rePasswordError').textContent = 'Re-enter your correct password.';
+                formIsValid = false;
+            } else if (strength === 'Poor' || strength === 'Good') {
+                document.getElementById('passwordError').textContent = 'Password strength should be Good or Strong.';
+                formIsValid = false;
+            } else {
+                document.getElementById('passwordError').textContent = '';
+            }
+
+            var gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                document.getElementById('genderError').textContent = 'POOR';
+                formIsValid = false;
+            } else {
+                document.getElementById('genderError').textContent = '';
+            }
+
+            var declarationCheckbox = document.getElementById('declarationCheckbox');
+            if (!declarationCheckbox.checked) {
+                document.getElementById('declarationError').textContent = 'POOR';
+                formIsValid = false;
+            } else {
+                document.getElementById('declarationError').textContent = '';
+            }
+
+            if (formIsValid) {
+                alert('Form submitted successfully!');
+                // Submit the form or perform further actions
+            }
+        });
+
+        function getPasswordStrength(password) {
+            if (password.length <= 3) {
+                return 'Poor';
+            } else if (password.length <= 6) {
+                return 'Good';
+            } else {
+                return 'Strong';
+            }
+        }
+    </script>
+</body>
+</html>
